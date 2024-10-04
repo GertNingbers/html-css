@@ -1,5 +1,10 @@
-body {
+ {
  text-align: center;
+}
+
+p {
+    border-left: 2000px;
+    border-right: 2000px;
 }
 
 
