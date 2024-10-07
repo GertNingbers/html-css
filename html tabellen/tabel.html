@@ -4,16 +4,42 @@
     <head>
         <title>HTML Tabellen</title>
         <meta  charset="UTF-8">
-
+        <link rel="stylesheet" href="./tabel.css">
     </head>
 
     <body>
-        <table>
+        <table class="table_1">
             <tr>
-                <th></th>
+                <th class="table_1_title" colspan="4">title</th>
             </tr>
             <tr>
-                <th></th>
+                <th class="table_1_sub1" colspan="2">subtitle</th> 
+                <th class="table_1_sub2" colspan="2">subtitle</th>
+            </tr>
+            <tr>
+                <th class="table_1_item1">1 item<br>1 item<br>1 item</th>
+                <th class="table_1_num1">123<br>123<br>123</th>
+                <th class="table_1_item2">1 item<br>1 item<br>1 item</th>
+                <th class="table_1_num2">123<br>123<br>123</th>
+            </tr>
+            <tr>
+                <th class="table_1_sub3" colspan="2">subtitle</th> 
+                <th class="table_1_sub4" colspan="2">subtitle</th>
+            </tr>
+        </table>
+
+        <table class="table_2">
+            <tr>
+                <th rowspan="3">1</th>
+                <th rowspan="1,5">2</th>
+                <th>3</th>
+            </tr>
+            <tr>
+                <th rowspan="1,5">5</th>
+                <th>4</th>
+            </tr>
+            <tr>
+
             </tr>
         </table>
     </body>

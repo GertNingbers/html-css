@@ -1,0 +1,40 @@
+table, th, tr {
+   border: 1px solid black;
+   border-radius:  10px;
+   border-width:  5px;
+}
+
+.table_1 {
+    background-color: gold;
+}
+
+.table_1_title {
+    background-color: rgb(22, 60, 232);
+    font-size: 100px;
+    color: gold;
+}
+
+.table_1_sub1, .table_1_sub4 {
+    background-color: rgb(251, 6, 6);
+    font-size: 50px;
+    color: gold;
+}
+
+.table_1_sub2, .table_1_sub3 {
+    background-color: rgb(151, 54, 151);
+    font-size: 50px;
+    color:gold
+}
+
+.table_1_item1, .table_1_item2 {
+    background-color: rgb(22, 60, 232);
+    font-size: 50px;
+    color:gold
+}
+
+.table_1_num1, .table_1_num2 {
+    background-color: rgb(25, 201, 15);
+    font-size: 50px;
+    color:gold;
+}
+
