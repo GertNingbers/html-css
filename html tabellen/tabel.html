@@ -1,46 +1,79 @@
 <!DOCTYPE html>
 <html lang="nl">
 
-    <head>
-        <title>HTML Tabellen</title>
-        <meta  charset="UTF-8">
-        <link rel="stylesheet" href="./tabel.css">
-    </head>
+<head>
+    <title>HTML Tabellen</title>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="./tabel.css">
+</head>
 
-    <body>
-        <table class="table_1">
-            <tr>
-                <th class="table_1_title" colspan="4">title</th>
-            </tr>
-            <tr>
-                <th class="table_1_sub1" colspan="2">subtitle</th> 
-                <th class="table_1_sub2" colspan="2">subtitle</th>
-            </tr>
-            <tr>
-                <th class="table_1_item1">1 item<br>1 item<br>1 item</th>
-                <th class="table_1_num1">123<br>123<br>123</th>
-                <th class="table_1_item2">1 item<br>1 item<br>1 item</th>
-                <th class="table_1_num2">123<br>123<br>123</th>
-            </tr>
-            <tr>
-                <th class="table_1_sub3" colspan="2">subtitle</th> 
-                <th class="table_1_sub4" colspan="2">subtitle</th>
-            </tr>
-        </table>
+<body>
+    <table class="table_1">
+        <tr>
+            <th class="table_1_title" colspan="4">title</th>
+        </tr>
+        <tr>
+            <th class="table_1_sub1" colspan="2">subtitle</th>
+            <th class="table_1_sub2" colspan="2">subtitle</th>
+        </tr>
+        <tr>
+            <th class="table_1_item1">1 item<br>1 item<br>1 item</th>
+            <th class="table_1_num1">123<br>123<br>123</th>
+            <th class="table_1_item2">1 item<br>1 item<br>1 item</th>
+            <th class="table_1_num2">123<br>123<br>123</th>
+        </tr>
+        <tr>
+            <th class="table_1_sub3" colspan="2">subtitle</th>
+            <th class="table_1_sub4" colspan="2">subtitle</th>
+        </tr>
+    </table><br>
 
-        <table class="table_2">
-            <tr>
-                <th rowspan="3">1</th>
-                <th rowspan="1,5">2</th>
-                <th>3</th>
-            </tr>
-            <tr>
-                <th rowspan="1,5">5</th>
-                <th>4</th>
-            </tr>
-            <tr>
+    <table class="table_2">
+        <tr>
+            <th class="table_2_h1">header</th>
+            <th class="table_2_h2">header</th>
+            <th class="table_2_h3">header</th>
+            <th class="table_2_h4">header</th>
+        </tr>
+        <tr>
+            <td rowspan="4" class="table_2_y1">you can span down.</td>
+            <td colspan="3" class="table_2_y2">you can span across.</td>
+        </tr>
+        <tr>
+            <td colspan="2" class="table_2_it1">it's like a puzzel</td>
+            <td rowspan="3" class="table_2_it2">over here.</td>
+        </tr>
+        <tr>
+            <td rowspan="2" class="table_2_t1">this way</td>
+            <td class="table_2_t2">that way</td>
+        </tr>
+        <tr>
+            <td class="table_2_w">where am i?</td>
+        </tr>
+    </table><br>
+ 
+    <table class="table_3">
+        <tr>
+            <td rowspan="2" class="table_3_a1">Area</td>
+            <td rowspan="2" class="table_3_u1">university name</td>
+            <td colspan="2" class="table_3_p1">precentage</td>
+        </tr>
+        <tr>
+            <td class="table_3_p2">undergraduate</td>
+            <td class="table_3_41">postgraduate</td>
+        </tr>
+        <tr>
+            <td rowspan="2" class="table_3_a2">area 1</td>
+            <td class="table_3_u2">university 1</td>
+            <td class="table_3_p3">60</td>
+            <td class="table_3_42">40</td>
+        </tr>
+        <tr>
+            <td class="table_3_u3">university 2</td>
+            <td class="table_3_p4">65</td>
+            <td class="table_3_43">35</td>
+        </tr>
+    </table>
+</body>
 
-            </tr>
-        </table>
-    </body>
 </html>

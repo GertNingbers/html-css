@@ -1,40 +1,40 @@
-table, th, tr {
+table, th, tr, td {
    border: 1px solid black;
    border-radius:  10px;
    border-width:  5px;
 }
 
-.table_1 {
+.table_3,.table_1, .table_2 {
     background-color: gold;
 }
 
 .table_1_title {
     background-color: rgb(22, 60, 232);
-    font-size: 100px;
+    font-size: 50px;
     color: gold;
 }
 
-.table_1_sub1, .table_1_sub4 {
+.table_3_43, .table_3_p2, .table_3_u2, .table_2_it2, .table_2_h3, .table_1_sub1, .table_1_sub4 {
     background-color: rgb(251, 6, 6);
-    font-size: 50px;
+    font-size: 25px;
     color: gold;
 }
 
-.table_1_sub2, .table_1_sub3 {
+.table_3_42, .table_3_p1, .table_3_u3, .table_2_t1, .table_2_y2, .table_2_h1,.table_1_sub2, .table_1_sub3 {
     background-color: rgb(151, 54, 151);
-    font-size: 50px;
+    font-size: 25px;
     color:gold
 }
 
-.table_1_item1, .table_1_item2 {
+.table_3_41, .table_3_p4, .table_3_u1, .table_3_a2, .table_2_t2, .table_2_y1, .table_2_h2, .table_1_item1, .table_1_item2 {
     background-color: rgb(22, 60, 232);
-    font-size: 50px;
+    font-size: 25px;
     color:gold
 }
 
-.table_1_num1, .table_1_num2 {
+.table_3_p3, .table_3_a1, .table_2_w, .table_2_it1, .table_2_h4, .table_1_num1, .table_1_num2 {
     background-color: rgb(25, 201, 15);
-    font-size: 50px;
+    font-size: 25px;
     color:gold;
 }
 
