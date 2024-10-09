@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="nl">
+<html lang="en">
 
 <head>
     <title>Formulier</title>
@@ -9,25 +9,48 @@
 
 <body>
     <h1>Basic HTML Form</h1>
-    <form action="formulier.html" method="post"><legend>Name</legend><br>
-        Voornaam: <input type="text" name="voornaam" value=""><br>
-        Achternaam: <input type="text" name="achternaam" value=""><br>
-        Geboortedatum: <input type="date" name="geboortedatum" value="01-01-2000"><br>
-        <input type="submit" value="verstuur">
-    </form>
+    <form action="formulier.html" method="post">
+        <fieldset>
+            <legend>Name</legend><br>
+            First Name: <input type="text" name="voornaam" value=""><br>
+            Last Name: <input type="text" name="achternaam" value=""><br>
+            Birthdate: <input type="date" name="geboortedatum" value="01-01-2000"><br>
+        </fieldset>
+    </form><br>
     <form>
-        <p>Choose a drink<br>
-            <input type="radio" name="drink" value="0">Coffee<br>
-            <input type="radio" name="drink" value="0">Tea<br>
-            <input type="radio" name="drink" value="0">Hot Chocolate
-        </p>
-        <p>
-            <input type="checkbox" name="icecream" value="0" checked>chocolate<br>
-            <input type="checkbox" name="icecream" value="1">chocolate pudding<br>
-            <input type="checkbox" name="icecream" value="2">Chocolate Peanut Butter<br>
-            <input type="checkbox" name="icecream" value="3">Vanilla<br>
-            <input type="checkbox" name="icecream" value="4">Strawberry<br>
-        </p>
+        <fieldset>
+            <legend>Favorite starter Pokemon</legend>
+            <p>
+                <br>
+                kiez je favorite starter pokemon type:<br>
+                <input type="radio" name="drink" value="0">grass<br>
+                <input type="radio" name="drink" value="1">water<br>
+                <input type="radio" name="drink" value="2">fire<br>
+            </p>
+            <p>Why is this your favorite starter:<br>
+                <input type="checkbox" name="reason" value="0">The desine<br>
+                <input type="checkbox" name="reason" value="1">It is my first pokemon<br>
+                <input type="checkbox" name="reason" value="2">Cute<br>
+                <input type="checkbox" name="reason" value="3">Cool<br>
+                <input type="checkbox" name="reason" value="4">Evolutions<br>
+            </p>
+            <p>Select Pokemon Gen:</p>
+            <select name="Gen">
+                <option value="op1">1</option>
+                <option value="op2">2</option>
+                <option value="op3">3</option>
+                <option value="op4">4</option>
+                <option value="op5">5</option>
+                <option value="op6">6</option>
+                <option value="op7">7</option>
+                <option value="op8">8</option>
+                <option value="op9">9</option>
+            </select>
+            <p>Favorite Pokemon:</p>
+            <textarea name="text" placeholder="your favorite pokemon That is not a starter."></textarea>
+            </textarea><br>
+            <input type="submit" value="send">
+        </fieldset>
     </form>
 </body>
 
