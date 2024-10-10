@@ -1,12 +1,48 @@
-.form input, .form button{
-    margin: 		3px;
+body{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    background-color: cadetblue;
+}
+form {
+    max-width: 400px;
+    margin: 40px auto;
+    padding: 20px;
+    border: 1px solid black;
+    border-radius: 10px;
+    background-color: aliceblue;
 }
 label {
-    display: 		inline-block;
-    width:			90px;
+    display: block;
+    margin-bottom: 10px;
 }
-#result {
-    background-color: silver;
-    width:			  30%;
-    height:			  200px;
+input[type="number"] {
+    width: 250px;
+    padding: 10px;
+    margin-bottom: 20px;
+    border: 1px solid black;
+
+}
+select {
+    width: 250px;
+    padding: 10px;
+    margin-bottom: 20px;
+    border: 1px solid black;
+
+}
+.result{
+    font-size: 24px;
+    font-weight: bold;
+    color: black;
+    padding: 20px;
+    border: 1px solid black;
+    border-radius: 10px;
+    background-color: aliceblue;
+}
+h1{
+    background-color: aliceblue;
+    border: 1px solid black;
+    border-radius: 10px;
+    padding: 10px;
 }

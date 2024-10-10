@@ -1,9 +1,17 @@
 <?php
 if (!empty($_POST)) {
-    if (empty($_POST['someValue1'])) {
-        $_POST['someValue1'] = 0;
-    }
-    $result = 'waarde ' . $_POST['someValue1'] . ' opgeteld met 1 = ' . ((int) $_POST['someValue1'] + 1);
+    $someValue1 = $_POST['someValue1'];
+    $operator = $_POST['door'];
+    $someValue2 = $_POST['someValue2'];
+
+    $result = match ($operator) {
+        '+' => $someValue1 + $someValue2,
+        '-' => $someValue1 - $someValue2,
+        '*' => $someValue1 * $someValue2,
+        '/' => $someValue2 == 0 ? 'Error: Division by zero!' : $someValue1 / $someValue2,
+        '%' => $someValue1 % $someValue2,
+        default => null,
+    };
 } else {
     $result = null;
 }
@@ -19,28 +27,29 @@ if (!empty($_POST)) {
 </head>
 
 <body>
-    <h1>PHP-formulier</h1>
+    <h1>PHP-Calculator</h1>
     <form action="" method="post">
-        <label>getal1</label>
-        <input type="number" name="someValue1" class="" placeholder="getal invoeren" />
-
+        <label>Enter a number: <br><input type="number" name="someValue1" required /></label>
         <br>
-        <select name="door">
-            <option value=+>+</option>
-            <option value=->-</option>
-            <option value=*>x</option>
-            <option value= / >/</option>
-            <option value=%>%</option>
-        </select><br>
-
-        <label>getal2</label>
-        <input type="number" name="someValue2" class="" placeholder="getal invoeren" />
+        <label>Choose an operator: <br><select name="door">
+                <option value="">Choose an operator</option>
+                <option value="+">+</option>
+                <option value="-">-</option>
+                <option value="*">x</option>
+                <option value="/">/</option>
+                <option value="%">%</option>
+            </select></label>
         <br>
-        <label>reken knop</label>
-        <input type="submit" value="reken"><br>
+        <label>Enter another number:<br> <input type="number" name="someValue2" required /></label>
+        <br>
+        <input type="submit" value="Calculate" />
     </form>
-    <div id="result">
-        <?php echo $result; ?>
+    <div class="result">
+        <?php if (!empty($_POST["door"])) {
+            echo $someValue1 . $operator . $someValue2 . " = " . $result;
+        } else {
+            echo "Please enter an operator and enter two numbers.";
+        }?>
     </div>
 </body>
 
