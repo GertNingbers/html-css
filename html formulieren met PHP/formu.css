@@ -1,0 +1,12 @@
+.form input, .form button{
+    margin: 		3px;
+}
+label {
+    display: 		inline-block;
+    width:			90px;
+}
+#result {
+    background-color: silver;
+    width:			  30%;
+    height:			  200px;
+}
