@@ -30,7 +30,7 @@ if (!empty($_POST)) {
     <form action="" method="post">
         <label>Zet een getal: <br><input type="number" name="someValue1" required /></label>
         <br>
-        <label>Kies een operator: <br><select name="door">
+        <label>Kies een operator: <br><select name="door" required>
                 <option value="">Kies een operator</option>
                 <option value="+">+</option>
                 <option value="-">-</option>
