@@ -2,19 +2,19 @@
 <html lang="en">
 
 <head>
-    <title>Formulier</title>
+    <title>JS-Formulier</title>
     <meta charset="UTF-8">
-    <link rel="stylesheet" href="form.css">
+    <link rel="stylesheet" href="formjs.css?1">
 </head>
 
 <body>
-    <h1>Basic HTML Form</h1>
+    <h1>Pokemon-JS-form</h1>
     <form action="formulier.html" method="post">
         <fieldset>
             <legend>Name</legend><br>
-            First Name: <input type="text" name="voornaam" value=""><br>
-            Last Name: <input type="text" name="achternaam" value=""><br>
-            Birthdate: <input type="date" name="geboortedatum" value=""><br>
+            First Name: <input type="text" name="firtsname" value=""><br>
+            Last Name: <input type="text" name="lastname" value=""><br>
+            Birthdate: <input type="date" name="Birthdate" value=""><br>
         </fieldset>
     </form><br>
     <form>
@@ -23,16 +23,17 @@
             <p>
                 <br>
                 kiez je favorite starter pokemon type:<br>
-                <input type="radio" name="drink" value="0">grass<br>
-                <input type="radio" name="drink" value="1">water<br>
-                <input type="radio" name="drink" value="2">fire<br>
+                <input type="radio" name="type" value="0">grass<br>
+                <input type="radio" name="type" value="1">water<br>
+                <input type="radio" name="type" value="2">fire<br>
             </p>
             <p>Why is this your favorite starter:<br>
                 <input type="checkbox" name="reason" value="0">The desine<br>
                 <input type="checkbox" name="reason" value="1">It is my first pokemon<br>
-                <input type="checkbox" name="reason" value="2">Cute<br>
+                <input type="checkbox" name="reason" value="2">Evolutions<br>
                 <input type="checkbox" name="reason" value="3">Cool<br>
-                <input type="checkbox" name="reason" value="4">Evolutions<br>
+                <input type="checkbox" name="reason" value="4">other<br>
+				<textarea name="reason" placeholder="A diffrent reason..."></textarea><br>
             </p>
             <p>Select Pokemon Gen:</p>
             <select name="Gen">
@@ -52,6 +53,9 @@
             <input type="submit" value="send">
         </fieldset>
     </form>
+	<div>
+		
+	</div>
 </body>
 
 </html>
