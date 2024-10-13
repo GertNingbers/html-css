@@ -1,5 +1,5 @@
 body {
-    background-color: burlywood;
+    background-color: cadetblue;
     font-size: medium;
     display: flex;
     flex-direction: column;
@@ -13,7 +13,7 @@ form {
     border-radius: 10px;
     padding: 10px;
     max-width: fit-content;
-    background-color: silver;
+    background-color: black;
 
 }
 
@@ -24,6 +24,14 @@ fieldset {
     padding: 10px;
     min-width: 285px;
 }
-div {
-    background-color: white;
-}
+#result {
+    font-size: 24px;
+    padding: 20px;
+    border: 10px solid black;
+    border-radius: 10px;
+    background-color: white;    
+  }
+  .boven {
+    background-color: red;
+    color: white;
+  }
