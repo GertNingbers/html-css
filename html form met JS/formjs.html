@@ -44,6 +44,54 @@
 	<div id="result" class="result"></div>
 
 	<script>
+		const pokemonData = {
+			'1': {
+				'0': { name: 'Bulbasaur', image: 'gen1grass' },
+				'1': { name: 'Charmander', image: 'gen1fire' },
+				'2': { name: 'Squirtle', image: 'gen1water' },
+			},
+			'2': {
+				'0': { name: 'Chikorita', image: 'gen2grass' },
+				'1': { name: 'Cyndaquil', image: 'gen2fire' },
+				'2': { name: 'Totodile', image: 'gen2water' },
+			},
+			'3': {
+				'0': { name: 'Treecko', image: 'gen3grass' },
+				'1': { name: 'Torchic', image: 'gen3fire' },
+				'2': { name: 'Mudkip', image: 'gen3water' },
+			},
+			'4': {
+				'0': { name: 'Turtwig', image: 'gen4grass' },
+				'1': { name: 'Chimchar', image: 'gen4fire' },
+				'2': { name: 'Piplup', image: 'gen4water' },
+			},
+			'5': {
+				'0': { name: 'Snivy', image: 'gen5grass' },
+				'1': { name: 'Tepig', image: 'gen5fire' },
+				'2': { name: 'Oshawott', image: 'gen5water' },
+			},
+			'6': {
+				'0': { name: 'Chespin', image: 'gen6grass' },
+				'1': { name: 'Fennekin', image: 'gen6fire' },
+				'2': { name: 'Froakie', image: 'gen6water' },
+			},
+			'7': {
+				'0': { name: 'Rowlet', image: 'gen7grass' },
+				'1': { name: 'Litten', image: 'gen7fire' },
+				'2': { name: 'Popplio', image: 'gen7water' },
+			},
+			'8': {
+				'0': { name: 'Grookey', image: 'gen8grass' },
+				'1': { name: 'Scorbunny', image: 'gen8fire' },
+				'2': { name: 'Sobble', image: 'gen8water' },
+			},
+			'9': {
+				'0': { name: 'Sprigatito', image: 'gen9grass' },
+				'1': { name: 'Fuecoco', image: 'gen9fire' },
+				'2': { name: 'Quaxly', image: 'gen9water' },
+			},
+		};
+
 		const genSelectElement = document.getElementById('gen-select');
 		const typeRadioButtons = document.getElementsByName('type');
 		const resultDiv = document.getElementById('result');
@@ -54,97 +102,18 @@
 			const selectedType = Array.from(typeRadioButtons).find((radioButton) => radioButton.checked).value;
 			const selectedGen = genSelectElement.value;
 
-			// Get the current values of the input fields
+			const pokemon = pokemonData[selectedGen][selectedType];
 			const firstName = document.getElementById('firstname').value;
 			const lastName = document.getElementById('lastname').value;
 			const birthdate = document.getElementById('birthdate').value;
 
-			if (true) {
-				let pokemonName;
-				let pokemonImage;
+			const resultText = `Your favorite starter is ${pokemon.name}! Your name is ${firstName} ${lastName} and your birthday is on ${birthdate}.`;
+			const pokemonImageElement = document.createElement('img');
+			pokemonImageElement.src = `img/${pokemon.image}.jpg`;
+			pokemonImageElement.alt = pokemon.name;
 
-				switch (selectedGen) {
-					case '1':
-						switch (selectedType) {
-							case '0': resultDiv.innerText = 'Bulbasaur'; break; pokemonImage = 'gen1grass';
-							case '1': resultDiv.innerText = 'Charmander'; break; pokemonImage = 'gen1fire';
-							case '2': resultDiv.innerText = 'Squirtle'; break; pokemonImage = 'gen1water';
-						}
-						break;
-					case '2':
-						switch (selectedType) {
-							case '0': resultDiv.innerText = 'Chikorita'; break; pokemonImage = 'gen2grass';
-							case '1': resultDiv.innerText = 'Cyndaquil'; break; pokemonImage = 'gen2fire';
-							case '2': resultDiv.innerText = 'Totodile'; break; pokemonImage = 'gen2water';
-						}
-						break;
-					case '3':
-						switch (selectedType) {
-							case '0': resultDiv.innerText = 'Treecko'; break; pokemonImage = 'gen3grass';
-							case '1': resultDiv.innerText = 'Torchic'; break; pokemonImage = 'gen3fire';
-							case '2': resultDiv.innerText = 'Mudkip'; break; pokemonImage = 'gen3water';
-						}
-						break;
-					case '4':
-						switch (selectedType) {
-							case '0': resultDiv.innerText = 'Turtwig'; break; pokemonImage = 'gen4grass';
-							case '1': resultDiv.innerText = 'Chimchar'; break; pokemonImage = 'gen4fire';
-							case '2': resultDiv.innerText = 'Piplup'; break; pokemonImage = 'gen4water';
-						}
-						break;
-					case '5':
-						switch (selectedType) {
-							case '0': resultDiv.innerText = 'Snivy'; break; pokemonImage = 'gen5grass';
-							case '1': resultDiv.innerText = 'Tepig'; break; pokemonImage = 'gen5fire';
-							case '2': resultDiv.innerText = 'Oshawott'; break; pokemonImage = 'gen5water';
-						}
-						break;
-					case '6':
-						switch (selectedType) {
-							case '0': resultDiv.innerText = 'Chespin'; break; pokemonImage = 'gen6grass';
-							case '1': resultDiv.innerText = 'Fennekin'; break; pokemonImage = 'gen6fire';
-							case '2': resultDiv.innerText = 'Froakie'; break; pokemonImage = 'gen6water';
-						}
-						break;
-					case '7':
-						switch (selectedType) {
-							case '0': resultDiv.innerText = 'Rowlet'; break; pokemonImage = 'gen7grass';
-							case '1': resultDiv.innerText = 'Litten'; break; pokemonImage = 'gen7fire';
-							case '2': resultDiv.innerText = 'Popplio'; break; pokemonImage = 'gen7water';
-						}
-						break;
-					case '8':
-						switch (selectedType) {
-							case '0': resultDiv.innerText = 'Grookey'; break; pokemonImage = 'gen8grass';
-							case '1': resultDiv.innerText = 'Scorbunny'; break; pokemonImage = 'gen8fire';
-							case '2': resultDiv.innerText = 'Sobble'; break; pokemonImage = 'gen8water';
-						}
-						break;
-					case '9':
-						switch (selectedType) {
-							case '0': resultDiv.innerText = 'Sprigatito'; break; pokemonImage = 'gen9grass';
-							case '1': resultDiv.innerText = 'Fuecoco'; break; pokemonImage = 'gen9fire';
-							case '2': resultDiv.innerText = 'Quaxly'; break; pokemonImage = 'gen9water';
-						}
-						break;
-					default:
-						break;
-				}
-
-				const resultDiv = document.getElementById('result');
-				const pokemonImageElement = document.createElement('img');
-				pokemonImageElement.src = `images/${pokemonImage}`;
-				pokemonImageElement.alt = pokemonName;
-
-				const pokemonName = resultDiv.innerText;
-				resultDiv.innerText = `Your favorite starter is ${pokemonName}! Your name is ${firstName} ${lastName} and your birthday is on ${birthdate}.`;
-				const pokemonImageElement = document.createElement('img');
-				pokemonImageElement.src = `images/${pokemonImage}`;
-				pokemonImageElement.alt = pokemonName;
-				resultDiv.appendChild(pokemonImageElement);
-			} else {
-				alert('Select a generation and type!');
-			}
+			resultDiv.innerText = resultText;
+			resultDiv.appendChild(pokemonImageElement);
 		});
 	</script>
 </body>
