@@ -53,80 +53,95 @@
 			e.preventDefault();
 			const selectedType = Array.from(typeRadioButtons).find((radioButton) => radioButton.checked).value;
 			const selectedGen = genSelectElement.value;
+
+			// Get the current values of the input fields
 			const firstName = document.getElementById('firstname').value;
 			const lastName = document.getElementById('lastname').value;
 			const birthdate = document.getElementById('birthdate').value;
 
-			if (selectedType && selectedGen) {
+			if (true) {
+				let pokemonName;
+				let pokemonImage;
+
 				switch (selectedGen) {
 					case '1':
 						switch (selectedType) {
-							case '0': resultDiv.innerText = 'Bulbasaur'; break;
-							case '1': resultDiv.innerText = 'Charmander'; break;
-							case '2': resultDiv.innerText = 'Squirtle'; break;
+							case '0': resultDiv.innerText = 'Bulbasaur'; break; pokemonImage = 'gen1grass';
+							case '1': resultDiv.innerText = 'Charmander'; break; pokemonImage = 'gen1fire';
+							case '2': resultDiv.innerText = 'Squirtle'; break; pokemonImage = 'gen1water';
 						}
 						break;
 					case '2':
 						switch (selectedType) {
-							case '0': resultDiv.innerText = 'Chikorita'; break;
-							case '1': resultDiv.innerText = 'Cyndaquil'; break;
-							case '2': resultDiv.innerText = 'Totodile'; break;
+							case '0': resultDiv.innerText = 'Chikorita'; break; pokemonImage = 'gen2grass';
+							case '1': resultDiv.innerText = 'Cyndaquil'; break; pokemonImage = 'gen2fire';
+							case '2': resultDiv.innerText = 'Totodile'; break; pokemonImage = 'gen2water';
 						}
 						break;
 					case '3':
 						switch (selectedType) {
-							case '0': resultDiv.innerText = 'Treecko'; break;
-							case '1': resultDiv.innerText = 'Torchic'; break;
-							case '2': resultDiv.innerText = 'Mudkip'; break;
+							case '0': resultDiv.innerText = 'Treecko'; break; pokemonImage = 'gen3grass';
+							case '1': resultDiv.innerText = 'Torchic'; break; pokemonImage = 'gen3fire';
+							case '2': resultDiv.innerText = 'Mudkip'; break; pokemonImage = 'gen3water';
 						}
 						break;
 					case '4':
 						switch (selectedType) {
-							case '0': resultDiv.innerText = 'Turtwig'; break;
-							case '1': resultDiv.innerText = 'Chimchar'; break;
-							case '2': resultDiv.innerText = 'Piplup'; break;
+							case '0': resultDiv.innerText = 'Turtwig'; break; pokemonImage = 'gen4grass';
+							case '1': resultDiv.innerText = 'Chimchar'; break; pokemonImage = 'gen4fire';
+							case '2': resultDiv.innerText = 'Piplup'; break; pokemonImage = 'gen4water';
 						}
 						break;
 					case '5':
 						switch (selectedType) {
-							case '0': resultDiv.innerText = 'Snivy'; break;
-							case '1': resultDiv.innerText = 'Tepig'; break;
-							case '2': resultDiv.innerText = 'Oshawott'; break;
+							case '0': resultDiv.innerText = 'Snivy'; break; pokemonImage = 'gen5grass';
+							case '1': resultDiv.innerText = 'Tepig'; break; pokemonImage = 'gen5fire';
+							case '2': resultDiv.innerText = 'Oshawott'; break; pokemonImage = 'gen5water';
 						}
 						break;
 					case '6':
 						switch (selectedType) {
-							case '0': resultDiv.innerText = 'Chespin'; break;
-							case '1': resultDiv.innerText = 'Fennekin'; break;
-							case '2': resultDiv.innerText = 'Froakie'; break;
+							case '0': resultDiv.innerText = 'Chespin'; break; pokemonImage = 'gen6grass';
+							case '1': resultDiv.innerText = 'Fennekin'; break; pokemonImage = 'gen6fire';
+							case '2': resultDiv.innerText = 'Froakie'; break; pokemonImage = 'gen6water';
 						}
 						break;
 					case '7':
 						switch (selectedType) {
-							case '0': resultDiv.innerText = 'Rowlet'; break;
-							case '1': resultDiv.innerText = 'Litten'; break;
-							case '2': resultDiv.innerText = 'Popplio'; break;
+							case '0': resultDiv.innerText = 'Rowlet'; break; pokemonImage = 'gen7grass';
+							case '1': resultDiv.innerText = 'Litten'; break; pokemonImage = 'gen7fire';
+							case '2': resultDiv.innerText = 'Popplio'; break; pokemonImage = 'gen7water';
 						}
 						break;
 					case '8':
 						switch (selectedType) {
-							case '0': resultDiv.innerText = 'Grookey'; break;
-							case '1': resultDiv.innerText = 'Scorbunny'; break;
-							case '2': resultDiv.innerText = 'Sobble'; break;
+							case '0': resultDiv.innerText = 'Grookey'; break; pokemonImage = 'gen8grass';
+							case '1': resultDiv.innerText = 'Scorbunny'; break; pokemonImage = 'gen8fire';
+							case '2': resultDiv.innerText = 'Sobble'; break; pokemonImage = 'gen8water';
 						}
 						break;
 					case '9':
 						switch (selectedType) {
-							case '0': resultDiv.innerText = 'Sprigatito'; break;
-							case '1': resultDiv.innerText = 'Fuecoco'; break;
-							case '2': resultDiv.innerText = 'Quaxly'; break;
+							case '0': resultDiv.innerText = 'Sprigatito'; break; pokemonImage = 'gen9grass';
+							case '1': resultDiv.innerText = 'Fuecoco'; break; pokemonImage = 'gen9fire';
+							case '2': resultDiv.innerText = 'Quaxly'; break; pokemonImage = 'gen9water';
 						}
 						break;
 					default:
 						break;
 				}
+
+				const resultDiv = document.getElementById('result');
+				const pokemonImageElement = document.createElement('img');
+				pokemonImageElement.src = `images/${pokemonImage}`;
+				pokemonImageElement.alt = pokemonName;
+
 				const pokemonName = resultDiv.innerText;
-				resultDiv.innerText = `Your Pokémon is ${pokemonName}! Your name is ${firstName} ${lastName} and you were born on ${birthDate}.`;
+				resultDiv.innerText = `Your favorite starter is ${pokemonName}! Your name is ${firstName} ${lastName} and your birthday is on ${birthdate}.`;
+				const pokemonImageElement = document.createElement('img');
+				pokemonImageElement.src = `images/${pokemonImage}`;
+				pokemonImageElement.alt = pokemonName;
+				resultDiv.appendChild(pokemonImageElement);
 			} else {
 				alert('Select a generation and type!');
 			}
