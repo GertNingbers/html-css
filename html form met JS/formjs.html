@@ -44,6 +44,7 @@
 	<div id="result" class="result"></div>
 
 	<script>
+		//dit is nested data in nested data, zodat ik de keys die ik invoer de juiste naam en img krijg.
 		const pokemonData = {
 			'1': {
 				'0': { name: 'Bulbasaur', image: 'gen1grass' },
@@ -98,22 +99,38 @@
 		const submitButton = document.querySelector('input[type="submit"]');
 
 		submitButton.addEventListener('click', (e) => {
+			//e.prev zorgt ervoor dat de pagina niet herlaad zodat de resultaat te zien komt.
 			e.preventDefault();
+			
+			//slaat de value van de radio button op.
 			const selectedType = Array.from(typeRadioButtons).find((radioButton) => radioButton.checked).value;
 			const selectedGen = genSelectElement.value;
 
+			//haaldt uit de pokemondata array de gen en type door de values te pakken
 			const pokemon = pokemonData[selectedGen][selectedType];
 			const firstName = document.getElementById('firstname').value;
 			const lastName = document.getElementById('lastname').value;
 			const birthdate = document.getElementById('birthdate').value;
 
-			const resultText = `Your favorite starter is ${pokemon.name}! Your name is ${firstName} ${lastName} and your birthday is on ${birthdate}.`;
+			const resultText = `${firstName} ${lastName} ${birthdate}.`;
 			const pokemonImageElement = document.createElement('img');
 			pokemonImageElement.src = `img/${pokemon.image}.jpg`;
 			pokemonImageElement.alt = pokemon.name;
 
-			resultDiv.innerText = resultText;
-			resultDiv.appendChild(pokemonImageElement);
+			//zorgt voor een <p> element zodat het onder elkaa komt.
+			const textParagraph1 = document.createElement('p');
+			textParagraph1.textContent = resultText;
+
+			const textParagraph = document.createElement('p');
+			textParagraph.textContent = pokemon.name;
+
+			const imageParagraph = document.createElement('p');
+			imageParagraph.appendChild(pokemonImageElement);
+
+			resultDiv.innerHTML = ''; // resultaat krijg je hierdoor in de div.
+			resultDiv.appendChild(textParagraph1);
+			resultDiv.appendChild(textParagraph);
+			resultDiv.appendChild(imageParagraph);
 		});
 	</script>
 </body>
