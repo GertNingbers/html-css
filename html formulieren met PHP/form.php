@@ -9,7 +9,7 @@ if (!empty($_POST)) {
         '*' => $getal1 * $getal2,
         '/' => $getal2 == 0 ? 'Error: Je kan niet door nul delen!' : $getal1 / $getal2,
         '%' => $getal1 % $getal2,
-        default => null,
+
     };
 } else {
     $result = null;

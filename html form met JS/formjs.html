@@ -99,14 +99,14 @@
 		const submitButton = document.querySelector('input[type="submit"]');
 
 		submitButton.addEventListener('click', (e) => {
-			//e.prev zorgt ervoor dat de pagina niet herlaad zodat de resultaat te zien komt.
+			//e.prev zorgt ervoor dat de pagina niet herlaad, zodat de resultaat te zien komt.
 			e.preventDefault();
 			
 			//slaat de value van de radio button op.
 			const selectedType = Array.from(typeRadioButtons).find((radioButton) => radioButton.checked).value;
 			const selectedGen = genSelectElement.value;
 
-			//haaldt uit de pokemondata array de gen en type door de values te pakken
+			//haaldt uit de pokemondata nest de gen en type door de values te pakken.
 			const pokemon = pokemonData[selectedGen][selectedType];
 			const firstName = document.getElementById('firstname').value;
 			const lastName = document.getElementById('lastname').value;
@@ -117,7 +117,7 @@
 			pokemonImageElement.src = `img/${pokemon.image}.jpg`;
 			pokemonImageElement.alt = pokemon.name;
 
-			//zorgt voor een <p> element zodat het onder elkaa komt.
+			//zorgt voor een <p> element zodat het onder elkaar komt.
 			const textParagraph1 = document.createElement('p');
 			textParagraph1.textContent = resultText;
 
